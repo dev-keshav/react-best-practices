@@ -3,21 +3,21 @@ import React, { useState } from "react";
 function ShowHide() {
 
     const [show, setShow] = useState("");
-    
-    function handleCon() {
+
+    function handleClick() {
         if(show===""){
-            setShow((show) => "Is this visible ?");
+            setShow("Visible ?");
         }
-        else if(show==="Is this vivible ?"){
-            setShow((show) => "");
+        else if(show!==""){
+            setShow("");
         }
     }
+    
 
     return(
         <>
         <h1>{show}</h1>
-        <button onClick={handleCon}>Show</button>
-        <button onClick={handleCon}>Hide</button>
+        <button onClick={handleClick}>Show/Hide</button>
         </>
     )
 }
